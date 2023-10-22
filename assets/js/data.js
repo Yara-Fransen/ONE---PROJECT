@@ -1,28 +1,28 @@
 //one event
 const oneEventDiv = document.getElementById('one-event');
 oneEventDiv.addEventListener('mouseenter', () => {
-  oneEventDiv.innerText = ''; // Remove the original text 
+  oneEventDiv.innerText = ''; 
 });
 oneEventDiv.addEventListener('mouseleave', () => {
-  oneEventDiv.innerText = 'ONE EVENT'; // Restore the original text
+  oneEventDiv.innerText = 'ONE EVENT'; 
 });
 
 //one week
 const oneWeekDiv = document.getElementById('one-week');
 oneWeekDiv.addEventListener('mouseenter', () => {
-  oneWeekDiv.innerText = ''; // Remove the original text 
+  oneWeekDiv.innerText = '';  
 });
 oneWeekDiv.addEventListener('mouseleave', () => {
-  oneWeekDiv.innerText = 'ONE WEEK'; // Restore the original text
+  oneWeekDiv.innerText = 'ONE WEEK'; 
 });
 
 //one news channel
 const oneChannelDiv = document.getElementById('one-newschannel');
 oneChannelDiv.addEventListener('mouseenter', () => {
-  oneChannelDiv.innerText = ''; // Remove the original text
+  oneChannelDiv.innerText = ''; 
 });
 oneChannelDiv.addEventListener('mouseleave', () => {
-  oneChannelDiv.innerText = 'ONE NEWS CHANNEL'; // Restore the original text 
+  oneChannelDiv.innerText = 'ONE NEWS CHANNEL';  
 }); 
 
 
@@ -61,7 +61,7 @@ const compareByCategory = (a, b) => {
     }
   } )
 
-  headlines.innerHTML = ''; // Clear existing headlines
+  headlines.innerHTML = ''; 
 
   orderedHeadlines.forEach(headline => {
     const headlineOutput = document.createElement('p');
@@ -70,8 +70,6 @@ const compareByCategory = (a, b) => {
       var bigHeadline = document.createElement( 'h2' );
       bigHeadline.classList.add( 'big-headline' );
       bigHeadline.innerHTML = headline.HEADLINE.replace(/'([^']+)'/g, "<span class='highlight'>'$1'</span>");
-
-      /*bigHeadline.innerText = headline.HEADLINE;*/
       
       bigHeadline.style.left = `${ Math.random( ) * 20 }vw`;
       bigHeadline.style.right = `${ Math.random( ) * 30 }vw`;
@@ -137,6 +135,7 @@ orderBtns.forEach( orderBtn => {
 
 })
 
+
 const infoDiv = document.getElementById('info');
 const readMoreBtn = document.getElementById('read-more');
 const readLessBtn = document.getElementById('read-less');
@@ -152,8 +151,6 @@ readLessBtn.addEventListener( 'click', ( ) => {
   readMoreBtn.style.display = 'inline-block';
   readLessBtn.style.display = 'none';
 } );
-
-
 
 fetch('data/headlines.json')
   .then(response => response.json())
