@@ -5,12 +5,13 @@
 
 body {
   margin-top: 0px;
+  height: 4000px;
 }
 
 #line {
-  width: 94vw;
+  width: 95.5vw;
   border-bottom: 2px solid black;
-  margin-top: 0px;
+  margin-top: 8px;
   margin-left: 40px;
   margin-right: 40px;
   overflow: hidden;
@@ -19,19 +20,18 @@ body {
 #intro {
   white-space: nowrap;
   text-transform: uppercase;
-  animation: move 40s linear infinite;
-  margin-block: 10px;
+  animation: move 75s linear infinite;
+  margin-block: 5px;
   overflow: visible;
   display: inline-block;
+  font-size: 1vw;
 }
 
 @keyframes move {
   0% {
-    /* transform: translateX(0); */
     translate: 100vw 0;
   }
   100% {
-      /* transform: translateX(-100%); */
       translate: -100% 0;
   }
 }
@@ -39,7 +39,7 @@ body {
 #line2 {
   position: sticky;
   bottom: 0;
-  width: 94vw;
+  width: 95.5vw;
   border-top: 2px solid black;
   height: 40px;
   margin-left: 40px;
@@ -52,7 +52,7 @@ body {
   font-size: 9vw;
   white-space: nowrap;
   margin-top: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-left: 40px;
   margin-right: 40px;
   align-items: center;
@@ -67,7 +67,7 @@ body {
 #one-event:hover::after {
   content: "CAPITOL PROTESTS";
   position: absolute;
-  top: 13px;
+  top: 2px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -81,31 +81,30 @@ body {
 #one-week:hover::after {
   content: "JANUARY 7-13 2021";
   position: absolute;
-  top: 13px;
+  top: 2px;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 9.2vw;
+  font-size: 9vw;
   color: yellow;
 }
 
 #one-newschannel:hover::after {
   content: "FOX NEWS CHANNEL";
   position: absolute;
-  top: 14px;
+  top: 2px;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 9.2vw;
+  font-size: 9vw;
   color: yellow;
 }
-
 
 #capitol {
   margin-left: 0px;
@@ -122,11 +121,11 @@ body {
 }
 
 #read-more {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 #read-less {
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 p {
@@ -138,23 +137,23 @@ p {
 }
 
 h1 {
-  font-size: 18px;
+  margin-top: 5px;
+  font-size: 1vw;
   font-weight: normal;
 }
 
 #subtitle {
   position: sticky;
-  top: 0 !important;
-  font-size: 18px;
+  top: 0px;
   margin: 40px;
   margin-bottom: 0px;
-  margin-top: 20px;
+  margin-top: 0px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   column-gap: 40px; 
   white-space: nowrap;
   border-bottom: 2px solid black;
-  height: 25px;
+  height: 30px;
 }
 
 h2 {
@@ -170,11 +169,13 @@ h2 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   column-gap: 40px;
+  line-height: 15px;
 }
 
 #headlines {
   margin: 40px;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #headlines p {
@@ -198,26 +199,28 @@ h2 {
   text-align: center;
   color: yellow;
 
-  animation: 8s forwards fadeOut;
-
+  animation: 12s forwards fadeOut;
   translate: 0 -50%;
-
   background: #beae94;
-
-  border: 2px solid yellow;
-
+  border: 5px solid yellow;
   pointer-events: none;
 }
 
 @keyframes fadeOut {
   0% { opacity: 1 }
   100% { opacity: 0 }
-}
+} 
 
-
-#buttons, #organize {
+#buttons {
   display: flex;
   margin-top: 7px;
+  margin-right: 7px;
+}
+
+#organize {
+  font-size: 1vw;
+  display: flex;
+  margin-top: 4px;
   margin-right: 7px;
 }
 
@@ -229,10 +232,16 @@ h2 {
   font-size: 14px;
   cursor: pointer; 
 }
+
 #buttons button.active {
   color: #beae94;
   background-color: black;
   border: none;
 }
 
-
+#headlines .big-headline .highlight {
+  font-weight: bold;
+  background-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: yellow;
+}
